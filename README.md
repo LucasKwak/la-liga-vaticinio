@@ -7,4 +7,4 @@ En cada jornada podrás establecer un marcador y dependiendo de este se sumarán
 
 Para centrarte en un equipo determinado, lo podrás seleccionar y ver un resumen (si pierde, gana o empata) de sus partidos.
 
-Visita la página: [LaLigaVaticinio](https://laligavaticinio.com/)
+Visita la página: <a href="https://laligavaticinio.com" target="_blank">LaLigaVaticinio</a>
