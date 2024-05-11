@@ -151,7 +151,7 @@ function crearElementoTablaClasificacion(posicion, nomEquipo, puntos, partidosJu
     divImgEscudo.className = "img-escudo";
 
     var imgEscudo = document.createElement("img");
-    imgEscudo.src = "images/laligaea/" + nomEquipo + ".png";
+    imgEscudo.src = "../images/laligaea/" + nomEquipo + ".png";
     imgEscudo.alt = nomEquipo;
 
     var divWrapperNombre = document.createElement("div");
@@ -571,7 +571,7 @@ function actualizarTabla() {
     tbody[0].innerHTML = "";
 
     equipos.forEach(function(equipo) {
-      var fila = crearElementoTR(equipo.posicion, "images/laligaea/" + equipo.nombre + ".png", equipo.nombre, equipo.puntos, equipo.partidosJugados, equipo.numVictorias, equipo.numEmpates, equipo.numDerrotas, equipo.golesFavor, equipo.golesContra, equipo.diferenciaGoles);
+      var fila = crearElementoTR(equipo.posicion, "../images/laligaea/" + equipo.nombre + ".png", equipo.nombre, equipo.puntos, equipo.partidosJugados, equipo.numVictorias, equipo.numEmpates, equipo.numDerrotas, equipo.golesFavor, equipo.golesContra, equipo.diferenciaGoles);
       tbody[0].appendChild(fila);
     });
 }
@@ -779,7 +779,7 @@ function crearPronostico(equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, e
 
     // Crear una imagen dentro del botón
     var imgCerrar = document.createElement("img");
-    imgCerrar.src = "images/cerrar.png";
+    imgCerrar.src = "../images/cerrar.png";
     imgCerrar.alt = "eliminar";
 
     // Agregar la imagen al botón
@@ -801,7 +801,7 @@ function crearPronostico(equipo1, equipo2, equipo3, equipo4, equipo5, equipo6, e
     divImgEscudo.classList.add("img-escudo");
 
     var imgEscudo = document.createElement("img");
-    imgEscudo.src = "images/laligaea/" + equipo1 + ".png";
+    imgEscudo.src = "../images/laligaea/" + equipo1 + ".png";
     imgEscudo.alt = equipo1;
 
     divImgEscudo.appendChild(imgEscudo);
