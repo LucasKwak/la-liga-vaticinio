@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elabora una predicción de una liga y descubre qué tiene que hacer tu equipo favorita para ganar">
+    <title>La Liga Vaticinio</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header class="header-main">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo">
+        </div>
+
+        <h1>La Liga<span>Vaticinio</span></h1>
+
+        <!-- BARRA DE NAVEGACION -->
+        <nav class="nav-bar">
+            <!-- MENU DESPLEGABLE / MENU ESTATICO -->
+            <ul>
+                <li>
+                    <a href="primeraRfef.html" class="logo-liga">
+                        <img src="/images/logoPrimeraRfef.png" alt="Logo primera REF">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="logo-liga">
+                        <img src="/images/logoLaLiga.png" alt="Logo la Liga EA">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- BOTON DE MENU DESPLEGABLE -->
+        <button class="mobile-menu-btn">
+            <img src="/images/line.png" alt="mobile-menu-btn">
+        </button>
+    </header>
+
+    <main class="main-view">
+        <div class="clasificacion-jornadas">
+
+            <section class="clasificacion">
+                <div class="title">
+                    <h2>clasificación</h2>
+                </div>
+    
+                <table class="tabla-clasificacion">
+                    <thead>
+                        <tr class="cabecera-tabla">
+                            <th>POS</th>
+                            <th>EQUIPO</th>
+                            <th>PTS</th>
+                            <th>PJ</th>
+                            <th>PG</th>
+                            <th>PE</th>
+                            <th>PP</th>
+                            <th>GF</th>
+                            <th>GC</th>
+                            <th>DG</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody class="cuerpo-tabla">
+                    </tbody>
+                </table>
+
+                <div class="title">
+                    <h2>Pronóstico de equipo</h2>
+                </div>
+
+                <div class="pronostico-partido">
+                    <label class="pronostico-titulo">Seleccionar equipo
+                        <select class="posibles-equipos">
+                            <option value="DEP">RC Deportivo</option>
+                            <option value="NAS">Gimnàstic de Tarragona</option>
+                            <option value="PON">Ponferradina</option>
+                            <option value="CEL">Celta Fortuna</option>
+                            <option value="BAR">Barca Atlètic</option>
+                            <option value="CUL">Cultural Leonesa</option>
+                            <option value="ARE">Arenteiro</option>
+                            <option value="LUG">CD Lugo</option>
+                            <option value="UNI">Unionistas CF</option>
+                            <option value="SAB">CE Sabdell</option>
+                            <option value="FUE">Fuenlabrada</option>
+                            <option value="OSA">Osasuna Promesas</option>
+                            <option value="MAJ">Rayo Majadahonda</option>
+                            <option value="RSO">Real Sociedad B</option>
+                            <option value="RUN">Real Unión Club</option>
+                            <option value="LOG">SD Logroñés</option>
+                            <option value="TAR">SD Tarazona</option>
+                            <option value="SES">Sestao River</option>
+                            <option value="TER">Teruel</option>
+                            <option value="COR">UE Cornellà</option>
+                        </select>
+                    </label>
+
+                    <button class="pronostico-boton">Ver Pronóstico</button>
+                </div>
+
+                <div class="pronosticos">
+                </div>
+            </section>
+
+            <section class="predicciones">
+                <div class="title">
+                    <h2>Jornadas</h2>
+                </div>
+    
+                <ul class="jornadas">
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 36
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/TAR.png" alt="TAR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">TAR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SAB</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/SAB.png" alt="SAB">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/NAS.png" alt="NAS">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">NAS</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">LOG</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/LOG.png" alt="LOG">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/LUG.png" alt="LUG">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">LUG</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">COR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/COR.png" alt="COR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/CEL.png" alt="CEL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CEL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">MAJ</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/MAJ.png" alt="MAJ">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/FUE.png" alt="FUE">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">FUE</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ARE</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/ARE.png" alt="ARE">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/PON.png" alt="PON">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">PON</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RUN</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/RUN.png" alt="RUN">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/UNI.png" alt="UNI">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">UNI</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RSO</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/RSO.png" alt="RSO">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/CUL.png" alt="CUL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CUL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">TER</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/TER.png" alt="TER">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/DEP.png" alt="DEP">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">DEP</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BAR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/BAR.png" alt="BAR">
+                                    </div>
+                                </div>
+
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/OSA.png" alt="OSA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">OSA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SES</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/SES.png" alt="SES">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 37
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/RSO.png" alt="RSO">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RSO</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">DEP</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/DEP.png" alt="DEP">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/BAR.png" alt="BAR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">BAR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">NAS</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/NAS.png" alt="NAS">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/TER.png" alt="TER">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">TER</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">OSA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/OSA.png" alt="OSA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/MAJ.png" alt="MAJ">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">MAJ</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">UNI</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/UNI.png" alt="UNI">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/COR.png" alt="COR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">COR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CUL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/CUL.png" alt="CUL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/LOG.png" alt="LOG">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">LOG</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">LUG</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/LUG.png" alt="LUG">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/RUN.png" alt="RUN">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RUN</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">FUE</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/FUE.png" alt="FUE">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/SES.png" alt="SES">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">SES</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">TAR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/TAR.png" alt="TAR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/SAB.png" alt="SAB">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">SAB</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">PON</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/PON.png" alt="PON">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/ARE.png" alt="ARE">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ARE</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CEL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/CEL.png" alt="CEL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 38
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/UNI.png" alt="UNI">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">UNI</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ARE</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/ARE.png" alt="ARE">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/TAR.png" alt="TAR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">TAR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">LOG</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/LOG.png" alt="LOG">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/PON.png" alt="PON">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">PON</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">TER</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/TER.png" alt="TER">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/NAS.png" alt="NAS">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">NAS</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">MAJ</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/MAJ.png" alt="MAJ">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/LUG.png" alt="LUG">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">LUG</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SAB</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/SAB.png" alt="SAB">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/CUL.png" alt="CUL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CUL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SES</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/SES.png" alt="SES">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/OSA.png" alt="OSA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">OSA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RSO</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/RSO.png" alt="RSO">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/FUE.png" alt="FUE">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">FUE</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">COR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/COR.png" alt="COR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/CEL.png" alt="CEL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CEL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BAR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/BAR.png" alt="BAR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/primeraRfef/DEP.png" alt="DEP">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">DEP</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RUN</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/primeraRfef/RUN.png" alt="RUN">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Creado por Lucas Kwak</h2>
+    </footer>
+    <script src="/implementation/scriptsRfef.js"></script>
+</body>
+</html>

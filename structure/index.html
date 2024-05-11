@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elabora una predicción de una liga y descubre qué tiene que hacer tu equipo favorita para ganar">
+    <title>La Liga Vaticinio</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header class="header-main">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo">
+        </div>
+
+        <h1>La Liga<span>Vaticinio</span></h1>
+
+        <!-- BARRA DE NAVEGACION -->
+        <nav class="nav-bar">
+            <!-- MENU DESPLEGABLE / MENU ESTATICO -->
+            <ul>
+                <li>
+                    <a href="/structure/primeraRfef.html" class="logo-liga">
+                        <img src="/images/logoPrimeraRfef.png" alt="Logo primera REF">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/structure/index.html" class="logo-liga">
+                        <img src="/images/logoLaLiga.png" alt="Logo la Liga EA">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- BOTON DE MENU DESPLEGABLE -->
+        <button class="mobile-menu-btn">
+            <img src="/images/menu.png" alt="mobile-menu-btn">
+        </button>
+    </header>
+
+    <main class="main-view">
+        <div class="clasificacion-jornadas">
+
+            <section class="clasificacion">
+                <div class="title">
+                    <h2>clasificación</h2>
+                </div>
+    
+                <table class="tabla-clasificacion">
+                    <thead>
+                        <tr class="cabecera-tabla">
+                            <th>POS</th>
+                            <th>EQUIPO</th>
+                            <th>PTS</th>
+                            <th>PJ</th>
+                            <th>PG</th>
+                            <th>PE</th>
+                            <th>PP</th>
+                            <th>GF</th>
+                            <th>GC</th>
+                            <th>DG</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody class="cuerpo-tabla">
+                    </tbody>
+                </table>
+
+                <div class="title">
+                    <h2>Pronóstico de equipo</h2>
+                </div>
+
+                <div class="pronostico-partido">
+                    <label class="pronostico-titulo">Seleccionar equipo
+                        <select class="posibles-equipos">
+                            <option value="RMA">Real Madrid</option>
+                            <option value="GIR">Girona FC</option>
+                            <option value="BAR">FC Barcelona</option>
+                            <option value="ATM">Atlético de Madrid</option>
+                            <option value="ATH">Athletic Club</option>
+                            <option value="BET">Real Betis</option>
+                            <option value="RSO">Real Sociedad</option>
+                            <option value="LPA">UD Las Palmas</option>
+                            <option value="VAL">Valencia CF</option>
+                            <option value="GET">Getafe CF</option>
+                            <option value="OSA">CA Osasuna</option>
+                            <option value="ALA">Deportivo Alavés</option>
+                            <option value="VIL">Villareal CF</option>
+                            <option value="RAY">Rayo Vallecano</option>
+                            <option value="SEV">Sevilla FC</option>
+                            <option value="CEL">RC Celta</option>
+                            <option value="MLL">RDC Mallorca</option>
+                            <option value="CAD">Cádiz CF</option>
+                            <option value="GRA">Granada CF</option>
+                            <option value="ALM">UD Almería</option>
+                        </select>
+                    </label>
+
+                    <button class="pronostico-boton">Ver Pronóstico</button>
+                </div>
+
+                <div class="pronosticos">
+                </div>
+            </section>
+
+            <section class="predicciones">
+                <div class="title">
+                    <h2>Jornadas</h2>
+                </div>
+    
+                <ul class="jornadas">
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 35
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="//images/laligaea/VAL.png" alt="VAL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">VAL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RAY</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="//images/laligaea/RAY.png" alt="RAY">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/BET.png" alt="BET">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">BET</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ALM</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ALM.png" alt="ALM">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/VIL.png" alt="VIL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">VIL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SEV</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/SEV.png" alt="SEV">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ALA.png" alt="ALA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ALA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GIR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GIR.png" alt="GIR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ATH.png" alt="ATH">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ATH</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">OSA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/OSA.png" alt="OSA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ATM.png" alt="ATM">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ATM</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CEL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/CEL.png" alt="CEL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/BAR.png" alt="BAR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">BAR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RSO</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/RSO.png" alt="RSO">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/MLL.png" alt="MLL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">MLL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">LPA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/LPA.png" alt="LPA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/CAD.png" alt="CAD">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CAD</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GET</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GET.png" alt="GET">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GRA.png" alt="GRA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GRA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RMA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/RMA.png" alt="RMA">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 36
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/CEL.png" alt="CEL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CEL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ATH</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ATH.png" alt="ATH">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/LPA.png" alt="LPA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">LPA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BET</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/BET.png" alt="BET">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RAY.png" alt="RAY">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RAY</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GRA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GRA.png" alt="GRA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GIR.png" alt="GIR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GIR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">VIL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/VIL.png" alt="VIL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RSO.png" alt="RSO">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RSO</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">VAL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/VAL.png" alt="VAL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/OSA.png" alt="OSA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">OSA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">MLL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/MLL.png" alt="MLL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RMA.png" alt="RMA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RMA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ALA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ALA.png" alt="ALA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GET.png" alt="GET">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GET</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ATM</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ATM.png" alt="ATM">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/SEV.png" alt="SEV">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">SEV</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CAD</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/CAD.png" alt="CAD">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ALM.png" alt="ALM">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ALM</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BAR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/BAR.png" alt="BAR">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 37
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/BAR.png" alt="BAR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">BAR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RAY</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/RAY.png" alt="RAY">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GRA.png" alt="GRA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GRA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CEL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/CEL.png" alt="CEL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ALA.png" alt="ALA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ALA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GET</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GET.png" alt="GET">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/VAL.png" alt="VAL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">VAL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GIR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GIR.png" alt="GIR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ATM.png" alt="ATM">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ATM</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">OSA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/OSA.png" alt="OSA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/CAD.png" alt="CAD">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CAD</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">LPA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/LPA.png" alt="LPA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/BET.png" alt="BET">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">BET</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RSO</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/RSO.png" alt="RSO">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/MLL.png" alt="MLL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">MLL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ALM</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ALM.png" alt="ALM">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/VIL.png" alt="VIL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">VIL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">RMA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/RMA.png" alt="RMA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ATH.png" alt="ATH">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ATH</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">SEV</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/SEV.png" alt="SEV">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="jornada-global">
+                        <div class="jornada-completa">
+                            <span class="numero-jornada">JORNADA 38
+                            </span>
+        
+                            <div class="jornada">
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/OSA.png" alt="OSA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">OSA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">VIL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/VIL.png" alt="VIL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/ALM.png" alt="ALM">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">ALM</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">CAD</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/CAD.png" alt="CAD">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/CEL.png" alt="CEL">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">CEL</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">VAL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/VAL.png" alt="VAL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RMA.png" alt="RMA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RMA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BET</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/BET.png" alt="BET">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RSO.png" alt="RSO">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RSO</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ATM</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ATM.png" alt="ATM">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GIR.png" alt="GIR">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GIR</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">GRA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/GRA.png" alt="GRA">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/RAY.png" alt="RAY">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">RAY</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ATH</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ATH.png" alt="ATH">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/SEV.png" alt="SEV">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">SEV</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">BAR</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/BAR.png" alt="BAR">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/GET.png" alt="GET">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">GET</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">MLL</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/MLL.png" alt="MLL">
+                                    </div>
+                                </div>
+                                
+                                <div class="partido">
+                                    <div class="img-escudo local">
+                                        <img src="/images/laligaea/LPA.png" alt="LPA">
+                                    </div>
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo local">LPA</span>
+                                    </div>
+                                    <input class="goles local" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <span>-</span>
+                                    <input class="goles visitante" type="number" name="numero" placeholder="0" oninput="filtrarNumero(this)" min="0">
+                                    <div class="wrapper-nombre-equipo">
+                                        <span class="nombre-equipo visitante">ALA</span>
+                                    </div>
+                                    <div class="img-escudo visitante">
+                                        <img src="/images/laligaea/ALA.png" alt="ALA">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Creado por Lucas Kwak</h2>
+    </footer>
+    <script src="/implementation/scripts.js"></script>
+</body>
+</html>
