@@ -412,14 +412,12 @@ POR ESO EL ESTILO COMPLEMENTARIO SIEMPRE DEBE IR DESPUES DEL ESTILO PRINCIPAL
 }
 
 .main-view .clasificacion-jornadas .clasificacion .pronosticos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
     gap: 15px;
 }
 
 .main-view .clasificacion-jornadas .clasificacion .pronosticos .pronostico {
-    min-width: 42%;
-    max-width: 42%;
     font-family: RobotoMedium;
     border-radius: 20px;
     background-color: #BBC4BE;
@@ -431,20 +429,6 @@ POR ESO EL ESTILO COMPLEMENTARIO SIEMPRE DEBE IR DESPUES DEL ESTILO PRINCIPAL
     gap: 10px;
     text-align: center;
     position: relative;
-}
-
-@media screen and (min-width: 590px) {
-    .main-view .clasificacion-jornadas .clasificacion .pronosticos .pronostico {
-        min-width: 28%;
-        max-width: 28%;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .main-view .clasificacion-jornadas .clasificacion .pronosticos .pronostico {
-        min-width: 25%;
-        max-width: 25%;
-    }
 }
 
 .main-view .clasificacion-jornadas .clasificacion .pronosticos .pronostico .eliminar-pronostico{
